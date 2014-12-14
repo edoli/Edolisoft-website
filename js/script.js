@@ -25,16 +25,6 @@ $(function() {
     $('.navbar-nav li').removeClass('active');
     $('.navbar-nav li#' + route).addClass('active');
 
-    var DISQUS;
-    if (DISQUS) {
-      console.log('reset');
-      DISQUS.reset({
-        reload: true,
-        config: function () {
-          this.page.identifier = route;
-        }
-      });
-    }
   }
 
   checkRoute();
