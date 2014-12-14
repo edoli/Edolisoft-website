@@ -27,6 +27,7 @@ $(function() {
 
     var DISQUS;
     if (DISQUS) {
+      console.log('reset');
       DISQUS.reset({
         reload: true,
         config: function () {
