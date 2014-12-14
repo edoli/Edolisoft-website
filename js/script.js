@@ -25,6 +25,7 @@ $(function() {
     $('.navbar-nav li').removeClass('active');
     $('.navbar-nav li#' + route).addClass('active');
 
+    var DISQUS;
     if (DISQUS) {
       DISQUS.reset({
         reload: true,
