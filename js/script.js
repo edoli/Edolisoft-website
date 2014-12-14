@@ -25,6 +25,16 @@ $(function() {
     $('.navbar-nav li').removeClass('active');
     $('.navbar-nav li#' + route).addClass('active');
 
+    if (DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: function () {
+          this.page.identifier = route;
+          this.page.url = 'http://edoli.github.io/Edolisoft-website/' + route;
+          this.page.title = route;
+        }
+      });
+    }
   }
 
   checkRoute();
