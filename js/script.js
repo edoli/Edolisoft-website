@@ -24,10 +24,21 @@ $(function() {
     $("#content").load('html/' + route + '.html');
     $('.navbar-nav li').removeClass('active');
     $('.navbar-nav li#' + route).addClass('active');
+
+    if (DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: function () {
+          this.page.identifier = route;
+        }
+      });
+    }
   }
 
   checkRoute();
   $(window).on('hashchange', function (e) {
     checkRoute();
   });
+
+
 });
