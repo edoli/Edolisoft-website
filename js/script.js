@@ -1,3 +1,4 @@
+
 $(function() {
   var lastRoute = '';
 
@@ -21,21 +22,19 @@ $(function() {
 
     lastRoute = route;
 
-    $("#content").load('html/' + route + '.html');
+    $("#content").load('html/' + route + '.html', function () {
+      $.get('html/disqus.html', function (html) {
+        html = html.replace('{{ title }}', route);
+        html = html.replace('{{ url }}', route);
+        html = html.replace('{{ identifier }}', route);
+        $('#comments').html(html);
+      });
+    });
     $('.navbar-nav li').removeClass('active');
     $('.navbar-nav li#' + route).addClass('active');
 
-    var DISQUS;
-    if (DISQUS) {
-      DISQUS.reset({
-        reload: true,
-        config: function () {
-          this.page.identifier = route;
-          this.page.url = 'http://edoli.github.io/Edolisoft-website/' + route;
-          this.page.title = route;
-        }
-      });
-    }
+
+
   }
 
   checkRoute();
