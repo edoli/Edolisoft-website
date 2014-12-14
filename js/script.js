@@ -22,6 +22,8 @@ $(function() {
     lastRoute = route;
 
     $("#content").load('html/' + route + '.html');
+    $('.navbar-nav li').removeClass('active');
+    $('.navbar-nav li#' + route).addClass('active');
   }
 
   checkRoute();
