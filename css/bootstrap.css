@@ -281,6 +281,9 @@ th {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  line-height: 0.75em;
+  vertical-align: -15%;
 }
 .glyphicon-asterisk:before {
   content: "\2a";
@@ -2767,7 +2770,6 @@ select[multiple].form-group-lg .form-control {
           user-select: none;
   background-image: none;
   border: 1px solid transparent;
-  border-radius: 4px;
   transition: 400ms;
 }
 .btn:focus,
@@ -2849,9 +2851,9 @@ fieldset[disabled] .btn-default.active {
   background-color: #333;
 }
 .btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4;
+  color: #3498db;
+  background-color: #fff;
+  border-color: #3498db;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2860,8 +2862,8 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #286090;
-  border-color: #204d74;
+  background-color: #3498db;
+  border-color: #3498db;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3111,21 +3113,18 @@ fieldset[disabled] .btn-link:focus {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
 }
 .btn-sm,
 .btn-group-sm > .btn {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
 }
 .btn-xs,
 .btn-group-xs > .btn {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
-  border-radius: 3px;
 }
 .btn-block {
   display: block;
@@ -3208,11 +3207,11 @@ tbody.collapse.in {
   background-color: #fff;
   -webkit-background-clip: padding-box;
           background-clip: padding-box;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, .15);
+  border: 1px solid #e7e7e7;
   border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, .175);
+  transition: 400ms;
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -3226,7 +3225,7 @@ tbody.collapse.in {
 }
 .dropdown-menu > li > a {
   display: block;
-  padding: 3px 20px;
+  padding: 6px 20px;
   clear: both;
   font-weight: normal;
   line-height: 1.42857143;
@@ -3508,7 +3507,6 @@ tbody.collapse.in {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
-  border-radius: 6px;
 }
 select.input-group-lg > .form-control,
 select.input-group-lg > .input-group-addon,
@@ -4214,8 +4212,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
+  color: #e67e22;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
